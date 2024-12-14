@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirCity - About</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
+    <title>AirCity-0.3v Coming Soon</title>
     <style>
-        /* General reset */
+        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -16,232 +14,85 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/025/550/094/small/hard-fall-rain-at-night-city-dark-street-and-lights-reflection-on-wet-asphalt-road-rainy-street-perspective-generated-by-artificial-intelligence-ai-generated-photo.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            min-height: 100vh;
-        }
-
-        /* Main Navigation */
-        nav.main-nav {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-
-        nav .content-wrapper-sm {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        nav a.navbar-brand {
-            color: #fff;
-            font-size: 24px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        nav .nav-links li {
-            margin-left: 20px;
-        }
-
-        nav .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav .nav-links a:hover {
-            color: #f4f7f6;
-            text-decoration: underline;
-        }
-
-        /* Header */
-        header {
-            position: relative;
             height: 100vh;
-            color: #fff;
-            text-align: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            z-index: 1;
-        }
-
-        header .wrapper {
-            animation: fadeInDown 2s ease;
-        }
-
-        header h1 {
-            font-size: 60px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        header h2 {
-            font-size: 24px;
-            margin-top: 10px;
-        }
-
-        /* About Section */
-        #about {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 50px 20px;
-            text-align: center;
-            margin-top: -20px;
-            border-radius: 15px;
-        }
-
-        #about h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #1a2b3c;
-            font-weight: bold;
-        }
-
-        #about p {
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            color: #555;
-        }
-
-        /* New Section for iframe */
-        .iframe-container {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .iframe-container h3 {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #1a2b3c;
-        }
-
-        iframe {
-            border: 0;
-            width: 100%;
-            height: 500px;
-            border-radius: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(45deg, #0a1129, #1f4068);
             color: #fff;
-            padding: 20px 0;
+        }
+
+        .container {
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
-        footer .social-links ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+        .container h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #4caf50;
         }
 
-        footer .social-links ul li {
-            margin: 0 15px;
+        .container p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
 
-        footer .social-links ul li a {
+        .countdown {
+            font-size: 2rem;
+            color: #ff9800;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 25px;
+            font-size: 1.2rem;
             color: #fff;
-            font-size: 20px;
-            transition: color 0.3s;
+            background: #3498db;
+            border-radius: 5px;
+            transition: 0.3s ease;
         }
 
-        footer .social-links ul li a:hover {
-            color: #f4f7f6;
+        .btn:hover {
+            background: #2980b9;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            iframe {
-                height: 350px;
-            }
-        }
-
-        @keyframes fadeInDown {
+        /* Animation */
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1);
             }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav" id="main-nav">
-        <div class="content-wrapper-sm">
-            <a href="#" class="navbar-brand">AirCity</a>
-            <div id="menu-button">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#reserve">Reservations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Main header -->
-    <header>
-        <div class="wrapper">
-            <h1><strong>Air</strong>City</h1>
-            <h2>Free to use for weather checking. <br> Created by K. Thirulingeshwar. <br>AirCity-0.2v. </h2>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About AirCity</h2>
-        <p>AirCity is a platform that allows users to check the weather around the world. It is designed to be easy to use, and it operates 24/7, making it accessible anytime, anywhere.</p>
-        <p>This project was created by K. Thirulingeshwar, using HTML and CSS. Thank you for using my project!</p>
-    </section>
-
-    <!-- New iframe section -->
-    <div class="iframe-container">
-        <h3>AirCity by: K. Thirulingeshwar</h3>
-        <iframe id="project" src="https://embed.windy.com/embed2.html?lat=11.808&lon=82.551&detailLat=11.808&detailLon=82.551&width=%&height=100%&zoom=7&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=%C2%B0C&radarRange=-1" allowfullscreen></iframe>
+    <div class="container">
+        <h1>AirCity-0.3v</h1>
+        <p>Something amazing is coming your way. Stay tuned!</p>
+        <div class="countdown">Launching Soon...</div>
     </div>
-
-    <!-- Footer -->
     <footer>
-        <div class="content-wrapper-sm display-flex-between">
-            <small>&copy; 2024 AirCity. All rights reserved.</small>
-            <div class="social-links">
-                <ul>
-                    <li><a href="https://www.instagram.com/lingesh_sci_2023/"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
+        &copy; 2024 AirCity. All rights reserved. | <a href="#">Privacy Policy</a>
     </footer>
-
 </body>
 </html>
+
