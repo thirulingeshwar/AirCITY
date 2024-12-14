@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AirCity-0.3v Coming Soon</title>
+    <title>AirCity - About</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
         /* General Reset */
         * {
@@ -14,85 +16,220 @@
 
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            background-image: url('https://i.pinimg.com/originals/31/e3/e7/31e3e72a22783c2c771bace1ccf51969.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav.main-nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        nav .navbar-brand {
+            color: #4CAF50;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Header */
+        header {
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: linear-gradient(45deg, #0a1129, #1f4068);
-            color: #fff;
-        }
-
-        .container {
             text-align: center;
-            animation: fadeIn 2s ease-in-out;
+            color: #fff;
+            padding: 0 20px;
         }
 
-        .container h1 {
-            font-size: 3rem;
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #4caf50;
+            font-weight: 300;
         }
 
-        .container p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
-        .countdown {
-            font-size: 2rem;
-            color: #ff9800;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 10px 25px;
-            font-size: 1.2rem;
+        header .btn {
+            background: #4CAF50;
             color: #fff;
-            background: #3498db;
-            border-radius: 5px;
-            transition: 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #2980b9;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        footer {
-            position: absolute;
-            bottom: 10px;
-            text-align: center;
-            width: 100%;
-            font-size: 0.9rem;
-            color: #bbb;
-        }
-
-        footer a {
-            color: #4caf50;
+            padding: 10px 20px;
+            font-size: 1.2rem;
             text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        header .btn:hover {
+            background: #45a049;
+        }
+
+        /* About Section */
+        #about {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            color: #1a2b3c;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Iframe Section */
+        .iframe-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .iframe-container h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1a2b3c;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer .social-links ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        footer .social-links ul li {
+            margin: 0 10px;
+        }
+
+        footer .social-links ul li a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        footer .social-links ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header h2 {
+                font-size: 1rem;
+            }
+
+            iframe {
+                height: 350px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>AirCity-0.3v</h1>
-        <p>Something amazing is coming your way. Stay tuned!</p>
-        <div class="countdown">Launching Soon...</div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="navbar-brand">AirCity</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#iframe-container">Live Map</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>AirCity 0.3v</h1>
+        <h2>Your gateway to global weather insights, available 24/7.</h2>
+        <a href="#about" class="btn">Learn More</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About AirCity</h2>
+        <p>AirCity provides real-time weather updates for cities around the globe. Explore the world’s atmosphere in one click!</p>
+    </section>
+
+    <!-- Iframe Section -->
+    <div class="iframe-container" id="iframe-container">
+        <h3>Live Weather Map</h3>
+        <iframe src="https://embed.windy.com/embed2.html?lat=11.808&lon=82.551&detailLat=11.808&detailLon=82.551&zoom=7&level=surface&overlay=rain" allowfullscreen></iframe>
     </div>
-    <footer>
-        &copy; 2024 AirCity. All rights reserved. | <a href="#">Privacy Policy</a>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2024 AirCity. All Rights Reserved.</p>
+        <div class="social-links">
+            <ul>
+                <li><a href="https://www.instagram.com/lingesh_sci_2023/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
     </footer>
+
 </body>
 </html>
-
