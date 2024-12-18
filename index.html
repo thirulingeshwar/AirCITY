@@ -1,159 +1,202 @@
-<!--
-     Date Created: 12/23/17
-     Date Revised: 12/26/17
--->
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-          <!-- Required meta tags -->
-          <meta charset="utf-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirCity-0.4v Coming Soon</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-          <!-- Title tag -->
-          <title>AirCity-0.4v</title>
+        body {
+            font-family: 'Roboto', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, rgba(25, 25, 112, 0.9) 0%, rgba(0, 0, 0, 1) 100%);
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+            animation: backgroundAnimation 10s ease-in-out infinite;
+        }
 
-          <!-- Font awesome -->
-          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        /* Background Animation */
+        @keyframes backgroundAnimation {
+            0% {
+                background: radial-gradient(circle, rgba(25, 25, 112, 0.9) 0%, rgba(0, 0, 0, 1) 100%);
+            }
+            50% {
+                background: radial-gradient(circle, rgba(0, 255, 255, 0.9) 0%, rgba(0, 0, 0, 1) 100%);
+            }
+            100% {
+                background: radial-gradient(circle, rgba(25, 25, 112, 0.9) 0%, rgba(0, 0, 0, 1) 100%);
+            }
+        }
 
-          <!-- Animate.css -->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        /* Container Styling */
+        .container {
+            text-align: center;
+            z-index: 2;
+            animation: fadeIn 3s ease-in-out;
+        }
 
-          <!-- Normalize -->
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+        .container h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            color: #00FFFF;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.7);
+        }
 
-          <!-- Custom CSS -->
-          <link href="css/styles.css" rel="stylesheet">
+        .container p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #A9A9A9;
+        }
 
-          <style>
-               /* If you wish to remove the astonish.js file, then also be sure to remove these styles. */
-               .astonish {
-                    visibility: visible;
-               }
+        .countdown {
+            font-size: 2.5rem;
+            color: #FF69B4;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+        }
 
-               @media (min-width: 768px) {
-                    .astonish {
-                         visibility: hidden;
-                    }
-                    .animated {
-                         visibility: visible;
-                    }
-               }
-          </style>
-     </head>
-     <body>
-          <!-- Main Navigation -->
-          <nav class="main-nav" id="main-nav">
-               <div class="content-wrapper-sm">
-                    <a href="#" class="navbar-brand">AirCity-0.4v</a>
-                    <div id="menu-button">
-                         <div class="bar1"></div>
-                         <div class="bar2"></div>
-                         <div class="bar3"></div>
-                    </div>
-                    <ul class="nav-links">
-                         <li><a href="#about">About</a></li>
-                         <li><a href="#reserve">Explore the Future</a></li>
-                         <li><a href="#contact">Contact Us</a></li>
-                         <li><a href="#windy-map">AirCity</a></li>
-                    </ul>
-               </div>
-          </nav>
+        .btn {
+            text-decoration: none;
+            padding: 12px 30px;
+            font-size: 1.3rem;
+            color: #fff;
+            background: #1A1A3D;
+            border-radius: 50px;
+            border: 2px solid #00FFFF;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
 
-          <!-- Main header -->
-          <header>
-               <img class="img-absolute" src="img/city.png" alt="Air City">
-               <div class="wrapper astonish animated fadeInDown">
-                    <h1><strong>Air</strong>City</h1>
-                    <h2>Welcome to AirCity-0.4v by K. Thirulingeshwar. <br> Your gateway to global weather insights, available 24/7.</h2>
-               </div>
-          </header>
+        .btn:hover {
+            background: #00FFFF;
+            color: #1A1A3D;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
 
-          <!-- Main content -->
-          <main>
-               <div class="content-wrapper" id="about">
-                    <img class="img-absolute" src="img/city2.png" alt="About Air City">
-                    <div class="grid">
-                         <div class="grid-col-sm-12 grid-col-md-6 astonish" data-animation="fadeInLeft">
-                              <h2 class="section-title">About AirCity</h2>
-                              <p>AirCity-0.4v is a futuristic city-focused platform offering real-time weather updates for cities worldwide.</p>
-                               <p> It allows users to explore global atmospheric conditions while providing dynamic, modern, and visually engaging interfaces.</p>
-                               <p>The design is fully responsive and adaptable, ideal for showcasing innovations in urban planning, smart city developments, and related projects. </p>
-                               <p> seamless integration of weather data, AirCity enables users to stay informed about the changing weather patterns across various regions.</p>
-                         </div>
-                    </div>
-               </div>
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
 
-               <div id="reserve" class="content-wrapper-lg text-center astonish" data-animation="zoomIn">
-                    <h2 class="section-title">Explore the Future</h2>
-                    <p>AirCity-0.4v invites users to experience a glimpse into futuristic urban landscapes. This feature offers an immersive look at modern city innovations, urban planning solutions, and smart city developments through a sleek design. With its dynamic interface, AirCity-0.4v provides a futuristic yet realistic view of how cities will evolve, offering both functionality and style.</p>
-               </div>
+        /* Floating Sci-Fi Effects */
+        .glowing {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 1);
+            animation: glowingEffect 3s infinite alternate;
+        }
 
-               <div class="content-wrapper" id="contact">
-                    <img class="img-absolute" src="img/city3.png" alt="Contact Air City">
+        @keyframes glowingEffect {
+            0% {
+                box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+                transform: scale(1.2);
+            }
+            100% {
+                box-shadow: 0 0 60px rgba(0, 255, 255, 1);
+                transform: scale(1.4);
+            }
+        }
 
-                    <form class="contact-form astonish" action="#" method="post" data-animation="fadeInRight">
-                    
-                    <form action="https://api.web3forms.com/submit" method="POST">
+        /* Sci-Fi Stars */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
 
-                         <!-- Replace with your Access Key -->
-                         <input type="hidden" name="access_key" value="5eb1817d-d797-47fb-9fcf-0d95420f2288">
-                         <h2 class="section-title">contact Us</h2>
-                         <div class="grid"> <!-- Form Inputs. Each input must have a name="" attribute -->
-                     <div class="grid-col-sm-12 grid-col-md-6">
-                         <div class="form-group">
-                         <input type="text" name="name" required>
-                         <label for="firstName">Name:</label>
-                         </div>
-                     </div>
-                     <div class="grid-col-sm-12 grid-col-md-6">
-                         <div class="form-group">
-                         <input type="email" name="email" required>
-                         <label for="email">Email:</label>
-                         </div>
-                    </div>
-                    <div class="grid-col-sm-12 grid-col-md-6">
-                         <div class="form-group">
-                         <textarea name="message" required></textarea>
-                         <label for="message">Message:</label>
-                         </div>
-                    </div>
-                     
-                         <!-- Honeypot Spam Protection -->
-                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                     
-                         <!-- Custom Confirmation / Success Page -->
-                         <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
-                         </div>
-                         <button class="btn btn-outline-teal" type="submit">Submit Form</button>
-                     
-                     </form>
-                    </form>
-               </div>
-          </main>
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: #00FFFF;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: flicker 1.5s infinite ease-in-out;
+        }
 
-          <!-- Embedded Weather Map -->
-          <iframe id="windy-map" width="100%" height="500" src="https://embed.windy.com/embed2.html?lat=11.808&lon=82.551&detailLat=11.808&detailLon=82.551&zoom=7&level=surface&overlay=rain" frameborder="0" allowfullscreen></iframe>
+        @keyframes flicker {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
 
-          <!-- Main footer -->
-          <footer>
-               <div class="content-wrapper-sm display-flex-between">
-                    <small>&copy; 2024 AirCity-0.4v. All rights reserved.</small>
-                    <div class="social-links">
-                         <ul>
-                              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                         </ul>
-                    </div>
-               </div>
-          </footer>
+        footer {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+            font-size: 1rem;
+            color: #00FFFF;
+            z-index: 2;
+        }
 
-          <!-- Scripts -->
-          <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-          <script src="js/menu.js" charset="utf-8"></script>
-          <script src="js/astonish.js" charset="utf-8"></script>
-          <script src="js/nav.js" charset="utf-8"></script>
-          <script src="js/scroll.js" charset="utf-8"></script>
-     </body>
+        footer a {
+            color: #FF69B4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Sci-Fi Stars and Glowing Effects -->
+    <div class="stars">
+        <div class="star" style="top: 20%; left: 10%;"></div>
+        <div class="star" style="top: 40%; left: 30%;"></div>
+        <div class="star" style="top: 60%; left: 60%;"></div>
+        <div class="star" style="top: 80%; left: 80%;"></div>
+        <div class="star" style="top: 10%; left: 90%;"></div>
+    </div>
+
+    <div class="glowing"></div>
+
+    <div class="container">
+        <h1>AirCity-0.4v</h1>
+        <p>Experience the future of technology. The revolution is on its way.</p>
+        <div class="countdown">Launching Soon...</div>
+
+    </div>
+
+    <footer>
+        &copy; 2024 AirCity. All rights reserved. | <a href="#">Privacy Policy</a>
+    </footer>
+</body>
 </html>
+
+
